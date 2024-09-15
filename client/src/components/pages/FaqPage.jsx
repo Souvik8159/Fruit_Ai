@@ -70,8 +70,9 @@ function FaqPage() {
   const deleteFaq = (id) => {
     axios.delete(`http://127.0.0.1:5000/faqs/${id}`)
       .then(() => {
-        const newFaqs = faqs.filter((faq) => faq._id !== id);
+        const newFaqs = faqs.filter((faq) => faq._id != id);
         setFaqs(newFaqs);
+        console.log(id);
       })
       .catch((err) => {
         console.error("Error deleting FAQ:", err);
