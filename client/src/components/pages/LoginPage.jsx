@@ -135,6 +135,7 @@ function LoginPage() {
                       <button className="rounded p-2 bg-blue-300 text-blue-700 hover:bg-gray-400">
                         <i className="fas fa-fingerprint fa-lg"></i>
                       </button>
+                        <p className="text-gray-300 py-2">email-user@example.com && password-password123</p>
                     </div>
                   </div>
                 </div>
