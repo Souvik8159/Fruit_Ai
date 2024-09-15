@@ -16,7 +16,7 @@ function FaqPage() {
   const [editCategory, setEditCategory] = useState("");
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/faqs")
+    axios.get("https://fruit-ai-2-o7fl.onrender.com/faqs")
       .then(response => {
         setFaqs(response.data);
       })
@@ -31,7 +31,7 @@ function FaqPage() {
 
     const data = { question, answer, category: catgory, author };
 
-    axios.post("http://127.0.0.1:5000/faqs", data)
+    axios.post("https://fruit-ai-2-o7fl.onrender.com/faqs", data)
       .then(() => {
         alert("Successfully added");
         refreshFaqs();
@@ -56,7 +56,7 @@ function FaqPage() {
   const updateFaq = () => {
     const updatedFaq = { question: editQuestion, answer: editAnswer, author: editAuthor, category: editCategory };
 
-    axios.put(`http://127.0.0.1:5000/faqs/${editingFaqId}`, updatedFaq)
+    axios.put(`https://fruit-ai-2-o7fl.onrender.com/faqs/${editingFaqId}`, updatedFaq)
       .then(() => {
         alert("Successfully updated");
         refreshFaqs();
@@ -94,7 +94,7 @@ function FaqPage() {
   };
 
   const refreshFaqs = () => {
-    axios.get("http://127.0.0.1:5000/faqs")
+    axios.get("https://fruit-ai-2-o7fl.onrender.com/faqs")
       .then(response => {
         setFaqs(response.data);
       })
