@@ -68,7 +68,7 @@ function FaqPage() {
   };
 
   const deleteFaq = (id) => {
-    axios.delete(`http://127.0.0.1:5000/faqs/${id}`)
+    axios.delete(`https://fruit-ai-2-o7fl.onrender.com/faqs/${id}`)
       .then(() => {
         const newFaqs = faqs.filter((faq) => faq._id != id);
         setFaqs(newFaqs);
