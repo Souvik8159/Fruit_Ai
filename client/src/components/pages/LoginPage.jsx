@@ -55,7 +55,6 @@ function LoginPage() {
           <div className="flex items-center justify-center w-full">
             <div className="w-full">
               <div className="flex justify-center gap-8">
-                {/* Login Tab */}
                 <a
                   href="#"
                   className={`text-opacity-90 border-b-2 py-2 transition-all ${
@@ -79,8 +78,6 @@ function LoginPage() {
                   Register
                 </a>
               </div>
-
-              {/* Login Form */}
               {activeTab === "login" && (
                 <div className="flex flex-col gap-4 mt-8">
                   <input
@@ -143,7 +140,6 @@ function LoginPage() {
                 </div>
               )}
 
-              {/* Register Form */}
               {activeTab === "register" && (
                 <div className="flex flex-col gap-4 mt-8">
                   <input

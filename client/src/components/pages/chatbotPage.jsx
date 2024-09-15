@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 function ChatbotPage() {
   const [messages, setMessages] = useState([]); 
   const [userInput, setUserInput] = useState('');
-  const [showInput, setShowInput] = useState(false); // Controls input visibility
-  const [showGreeting, setShowGreeting] = useState(true); // Controls greeting visibility
+  const [showInput, setShowInput] = useState(false);
+  const [showGreeting, setShowGreeting] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -13,7 +13,6 @@ function ChatbotPage() {
       setShowGreeting(false); 
     }, 2000);
 
-    // Cleanup timer
     return () => clearTimeout(timer);
   }, []);
 
@@ -85,7 +84,6 @@ function ChatbotPage() {
           ))}
         </div>
 
-        {/* Show input after greeting */}
         {showInput && (
           <div className="flex mt-4">
             <input

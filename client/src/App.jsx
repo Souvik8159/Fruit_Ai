@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/pages/LoginPage';
 import HomePage from './components/pages/HomePage';
-import ChatbotPage from './components/pages/ChatbotPage';
+import ChatbotPage from './components/pages/chatbotPage';
 import TranslatorPage from './components/pages/TranslatorPage.jsx';
 import FaqPage from './components/pages/FaqPage';
 import AboutPage from './components/pages/AboutPage';

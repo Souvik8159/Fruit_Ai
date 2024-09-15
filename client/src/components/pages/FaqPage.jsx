@@ -9,13 +9,12 @@ function FaqPage() {
   const [catgory, setCatgory] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [editingFaqId, setEditingFaqId] = useState(null); // State for editing
+  const [editingFaqId, setEditingFaqId] = useState(null); 
   const [editQuestion, setEditQuestion] = useState("");
   const [editAnswer, setEditAnswer] = useState("");
   const [editAuthor, setEditAuthor] = useState("");
   const [editCategory, setEditCategory] = useState("");
 
-  // Fetch FAQs when the component mounts
   useEffect(() => {
     axios.get("http://127.0.0.1:5000/faqs")
       .then(response => {
